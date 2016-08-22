@@ -26,21 +26,21 @@ class AlterFontSize extends React.Component {
     var rows = [];
     var options = [];
     var options2 = [];
-    for(var i = 0; i<dimension.y; i++){
+    for(let i = 0; i<dimension.y; i++){
       rows.push(<Box key={i} dimension={dimension} y={i} fillUpIndexes={fillUpIndexes}/>);
     }
-    for(var i = 2; i<=37; i++){
+    for(let i = 2; i<=37; i++){
       options.push(<option key={i} value={i}>{i}%</option>);
     }
-    for(var i = 66; i<=90; i++){
+    for(let i = 66; i<=90; i++){
       options2.push(<option key={i} value={String.fromCharCode(i)}>{String.fromCharCode(i)}</option>);
     }
     return (
       <div>
         <h1>Font Size Changer</h1>
         <div className="form-group col-md-12">
-          <label htmlFor="resizePercentage" className='col-md-1 control-label'>Resize</label>
-          <div className='col-md-5'>
+          <label htmlFor="resizePercentage" className='col-md-2 control-label'>Resize</label>
+          <div className='col-md-10'>
             <select id='resizePercentage' ref='resizePercentage'
                     className='selectpicker form-control' id='form-control'
                     onChange={this.resize.bind(this)}>
@@ -48,8 +48,8 @@ class AlterFontSize extends React.Component {
              {options}
             </select>
           </div>
-          <label htmlFor="letterTorender" className='col-md-1 control-label'>Pick a Letter</label>
-          <div className='col-md-5'>
+          <label htmlFor="letterTorender" className='col-md-2 control-label'>Pick a Letter</label>
+          <div className='col-md-10'>
             <select id='letterTorender' ref='letterTorender'
                     className='selectpicker form-control' id='form-control'
                     onChange={this.renderLetter.bind(this)}>
