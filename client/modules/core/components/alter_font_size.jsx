@@ -30,7 +30,7 @@ class AlterFontSize extends React.Component {
       rows.push(<Box key={i} dimension={dimension} y={i} fillUpIndexes={fillUpIndexes}/>);
     }
     for(let i = 2; i<=37; i++){
-      options.push(<option key={i} value={i}>{i}%</option>);
+      options.push(<option key={i} value={i}>{i}x</option>);
     }
     for(let i = 66; i<=90; i++){
       options2.push(<option key={i} value={String.fromCharCode(i)}>{String.fromCharCode(i)}</option>);
